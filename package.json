@@ -1,0 +1,66 @@
+{
+  "name": "react-standard-titlebar",
+  "version": "0.1.0",
+  "description": "A customizable Titlebar component with theming support",
+  "license": "MIT",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/style.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && vite build && tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "titlebar",
+    "theme",
+    "customizable",
+    "electron",
+    "window-controls"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scolor-dev/react-standard-titlebar",
+    "license": "MIT"
+  },
+  "bugs": {
+    "url": "https://github.com/scolor-dev/react-standard-titlebar/issues"
+  },
+  "homepage": "https://github.com/scolor-dev/react-standard-titlebar#readme",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@storybook/addon-docs": "^9.0.18",
+    "@storybook/addon-onboarding": "^9.0.18",
+    "@storybook/react-vite": "^9.0.18",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.7.0",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "playwright": "^1.54.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.89.2",
+    "sass-embedded": "^1.89.2",
+    "storybook": "^9.0.18",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.5"
+  }
+}

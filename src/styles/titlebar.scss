@@ -1,0 +1,58 @@
+// styles/titlebar.scss
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  -webkit-app-region: drag; // Electronでウィンドウドラッグ領域にする場合（要不要は適宜）
+  background-color: var(--header-bg);
+  color: var(--logo-color);
+  padding: 0 8px;
+  user-select: none;
+}
+
+.titlebar__logo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.titlebar__controls {
+  display: flex;
+  gap: 4px;
+  -webkit-app-region: no-drag; // ボタンはドラッグ不可にする（Electron向け）
+}
+
+.titlebar__btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--btn-color);
+  transition: background 0.2s, color 0.2s;
+}
+
+.titlebar__btn:hover {
+  color: var(--btn-hover-color, var(--btn-color));
+  background: var(--btn-hover-bg, transparent);
+}
+
+.titlebar__btn:active {
+  color: var(--btn-active-color, var(--btn-hover-color, var(--btn-color)));
+  background: var(--btn-active-bg, var(--btn-hover-bg, transparent));
+}
+
+.titlebar__btn--exit:hover {
+  color: var(--btn-exit-hover-color, var(--btn-hover-color, var(--btn-color)));
+  background: var(--btn-exit-hover-bg, var(--btn-hover-bg, transparent));
+}
+
+.titlebar__btn--exit:active {
+  color: var(--btn-exit-active-color, var(--btn-exit-hover-color, var(--btn-hover-color, var(--btn-color))));
+  background: var(--btn-exit-active-bg, var(--btn-exit-hover-bg, var(--btn-hover-bg, transparent)));
+}

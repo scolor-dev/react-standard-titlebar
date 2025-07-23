@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",             // [EN] Modern JS output / [JP] 最新JS出力
+    "module": "ESNext",             // [EN] ESM modules / [JP] ESMモジュール形式
+    "moduleResolution": "Node",     // [EN] Node.js module resolution / [JP] Node.jsのモジュール解決
+    "jsx": "react-jsx",             // [EN] React 17+ JSX transform / [JP] React 17+ JSX変換
+    "declaration": true,            // [EN] Generate .d.ts / [JP] 型定義を生成
+    "emitDeclarationOnly": true,    // [EN] Only output .d.ts, no .js / [JP] .jsは出さず.d.tsだけ出力
+    "outDir": "./dist",             // [EN] Output to dist/ / [JP] distに出力
+    "rootDir": "./src",             // [EN] Root source folder / [JP] ルートソースフォルダ
+    "strict": true,                 // [EN] Strict type checks / [JP] 厳格型チェック
+    "esModuleInterop": true,        // [EN] Interop with CommonJS / [JP] CommonJS互換
+    "forceConsistentCasingInFileNames": true, // [EN] Case-sensitive check / [JP] ファイル名大文字小文字チェック
+    "skipLibCheck": true            // [EN] Skip lib type check / [JP] ライブラリ型チェックをスキップ
+  },
+  "include": ["src"]       // [EN] Only include src/ / [JP] src だけ対象
+}
