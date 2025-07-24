@@ -3,7 +3,6 @@
 // [EN] Common SCSS entry point
 // [JP] グローバルスタイルエントリ
 
-@use './themes';
 @use './titlebar';
 
 // Reset & base styles
@@ -12,9 +11,4 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
-}
-
-body {
-  background: var(--header-bg);
-  color: var(--logo-color);
 }
