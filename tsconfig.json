@@ -13,5 +13,5 @@
     "forceConsistentCasingInFileNames": true, // [EN] Case-sensitive check / [JP] ファイル名大文字小文字チェック
     "skipLibCheck": true            // [EN] Skip lib type check / [JP] ライブラリ型チェックをスキップ
   },
-  "include": ["src"]       // [EN] Only include src/ / [JP] src だけ対象
+  "include": ["src"]                // [EN] Only include src/ / [JP] src だけ対象
 }
