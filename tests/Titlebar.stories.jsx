@@ -1,6 +1,6 @@
 import React from 'react';
 import { Titlebar } from '../src';
-import { ThemeProvider } from '../src';
+import { TitlebarProvider } from '../src';
 import '../src/styles/index.scss';
 
 export default {
@@ -10,24 +10,41 @@ export default {
 
 export const Light = () => (
   <>
-    <ThemeProvider
+    <TitlebarProvider
       theme="light"
+    layout="standard"
     >
-        <Titlebar title="test"/>
-    </ThemeProvider>
+        <Titlebar title="light standard"/>
+    </TitlebarProvider>
     <main>
-        aaa
+        theme = light
     </main>
   </>
 );
 
-export const Dark = () => (
-  <ThemeProvider
-    theme="dark"
+export const HideLight = () => (
+  <>
+    <TitlebarProvider
+      theme="hide-light"
+    layout="standard"
+    >
+        <Titlebar title="hide light standard"/>
+    </TitlebarProvider>
+    <main>
+        theme = light
+    </main>
+  </>
+);
+
+export const HideDarkSlim = () => (
+  <TitlebarProvider
+    theme="hide-dark"
+    layout="slim"
   >
-      <Titlebar title="test"/>
+      <Titlebar title="hide dark slim"/>
       <main>
-          aaa
+        theme = hide-dark
+        layout = slim
       </main>
-  </ThemeProvider>
+  </TitlebarProvider>
 );

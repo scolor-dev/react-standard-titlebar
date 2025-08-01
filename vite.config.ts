@@ -23,7 +23,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "./_variables.scss"; @use "./_themes.scss";`
+        additionalData: `
+          @use "./_variables.scss";
+          @use "./_themes.scss";
+          @use "./_layouts.scss";
+        `,
       },
     },
   },

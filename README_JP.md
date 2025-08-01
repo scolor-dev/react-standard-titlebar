@@ -25,21 +25,16 @@ npm install react-standard-titlebar
 
 ```tsx
 import React from 'react';
-import { ThemeProvider, Titlebar } from 'react-standard-titlebar';
+import { TitlebarProvider, Titlebar } from 'react-standard-titlebar';
 
 function App() {
   return (
-    <ThemeProvider
-      theme="custom"
-      headerBg="#333"
-      logoColor="#fff"
-      buttons={{
-        base: { color: '#fff' },
-        exit: { hoverBg: '#e00' },
-      }}
+    <TitlebarProvider
+      theme="light"
+      layout="standard"
     >
       <Titlebar title="My App" />
-    </ThemeProvider>
+    </TitlebarProvider>
   );
 }
 
@@ -48,14 +43,12 @@ export default App;
 
 ## ⚙️ Props
 
-### `<ThemeProvider>`
+### `<TitlebarProvider>`
 
 | Prop        | Type     | 説明                                                   |
 |-------------|----------|--------------------------------------------------------|
-| `theme`     | `string` | テーマ名（例: `'custom'`）                              |
-| `headerBg`  | `string` | タイトルバーの背景色                                   |
-| `logoColor` | `string` | ロゴテキストの色                                       |
-| `buttons`   | `object` | ボタンスタイル設定 `{ base, min, max, exit }`          |
+| `theme`      | `string` | テーマ名 (`'light'`, `'dark'`, `'system'`, `'hide-light'`, `'hide-dark'`, `'hide-system'`) |
+| `layout`     | `string` | レイアウト: `'standard'`, `'slim'`, etc.       |
 
 ---
 

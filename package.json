@@ -1,6 +1,6 @@
 {
   "name": "react-standard-titlebar",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "A customizable Titlebar component with theming support",
   "license": "MIT",
   "main": "dist/index.umd.js",

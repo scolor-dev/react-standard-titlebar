@@ -20,23 +20,22 @@ Ideal for Electron apps or custom window UIs.
 npm install react-standard-titlebar
 ```
 ## 🚀 Usage
-```
+
+```tsx
 import React from 'react';
-import { ThemeProvider, Titlebar } from 'react-standard-titlebar';
+import { TitlebarProvider, Titlebar, Layout } from 'react-standard-frame';
 
 function App() {
   return (
-    <ThemeProvider
+    <TitlebarProvider
       theme="custom"
-      headerBg="#333"
-      logoColor="#fff"
-      buttons={{
-        base: { color: '#fff' },
-        exit: { hoverBg: '#e00' },
-      }}
+      layout="standard"
     >
-      <Titlebar title="My App" />
-    </ThemeProvider>
+      <Layout>
+        <Titlebar title="My App" />
+        {/* Main content here */}
+      </Layout>
+    </TitlebarProvider>
   );
 }
 
@@ -45,14 +44,12 @@ export default App;
 
 ## ⚙️ Props
 
-### `<ThemeProvider>`
+### `<TitlebarProvider>`
 
 | Prop       | Type     | Description                                  |
 |------------|----------|----------------------------------------------|
-| `theme`    | `string` | Theme name (e.g., `'custom'`)                |
-| `headerBg` | `string` | Background color for the titlebar            |
-| `logoColor`| `string` | Color for the logo text                      |
-| `buttons`  | `object` | Button style config `{ base, min, max, exit }` |
+| `theme`      | `string` | Theme name (`'light'`, `'dark'`, `'system'`, `'hide-light'`, `'hide-dark'`, `'hide-system'`) |
+| `layout`     | `string` | Layout mode: `'standard'`, `'slim'`, etc.       |
 
 ---
 

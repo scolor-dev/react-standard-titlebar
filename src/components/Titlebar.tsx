@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme } from '../context/ThemeProvider';
+// import { useTitlebar } from '../context/TitlebarProvider';
 
 export interface TitlebarProps {
   /** [EN] Handler for Minimize button. [JP] 最小化ボタンのハンドラー */
@@ -21,11 +21,11 @@ export const Titlebar: React.FC<TitlebarProps> = ({
   onExit,
   title = 'My App',
 }) => {
-  const { headerBg, logoColor, buttons } = useTheme();
-  const base = buttons?.base;
-  const min = buttons?.min;
-  const max = buttons?.max;
-  const exit = buttons?.exit;
+  // const { headerBg, logoColor, buttons } = useTitlebar();
+  // const base = buttons?.base;
+  // const min = buttons?.min;
+  // const max = buttons?.max;
+  // const exit = buttons?.exit;
 
   const [isMaximized, setIsMaximized] = useState(false);
 
@@ -44,34 +44,25 @@ export const Titlebar: React.FC<TitlebarProps> = ({
   };
 
   return (
-    <div
-      className="titlebar"
-      style={{
-        background: headerBg,
-        color: logoColor,
-      }}
-    >
+    <div className="titlebar">
       <div className="titlebar__logo">{title}</div>
       <div className="titlebar__controls">
         <button
           className="titlebar__btn"
-          style={{ color: min?.color ?? base?.color }}
           onClick={handleMinimize}
-        >
+          >
           _
         </button>
         <button
           className="titlebar__btn"
-          style={{ color: max?.color ?? base?.color }}
           onClick={handleMaximizeToggle}
-        >
+          >
           {isMaximized ? '🗗' : '☐'}
         </button>
         <button
           className="titlebar__btn titlebar__btn--exit"
-          style={{ color: exit?.color ?? base?.color }}
           onClick={handleExit}
-        >
+          >
           ✕
         </button>
       </div>

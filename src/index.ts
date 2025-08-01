@@ -10,17 +10,17 @@
 // [JP] タイトルバーのメインコンポーネント
 export { Titlebar } from './components/Titlebar';
 
-// [EN] ThemeProvider component
+// [EN] TitlebarProvider component
 // [JP] テーマを適用するためのコンテキストプロバイダ
-export { ThemeProvider } from './context/ThemeProvider';
+export { TitlebarProvider } from './context/TitlebarProvider';
 
 // ----------------------------------
 // ✅ Export TypeScript types
 // ----------------------------------
 
-// [EN] ThemeProvider Props type
-// [JP] ThemeProvider 用の型
-export type { ThemeProviderProps } from './context/ThemeProvider';
+// [EN] TitlebarProvider Props type
+// [JP] TitlebarProvider 用の型
+export type { TitlebarProviderProps } from './context/TitlebarProvider';
 
 // [EN] Titlebar Props type
 // [JP] Titlebar 用の型
